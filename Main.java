@@ -77,9 +77,35 @@ public class Main {
     }
 
     break;
+                case 3:
+                    System.out.println("\n=== Cadastrar tarefa ===");
+                    // Implementar cadastro de tarefa
+                    break;
+
+                case 4:
+                    System.out.println("\n=== Relatório ===");
+                    // Implementar relatório
+                    break;
+
+                case 5:
+                    System.out.println("\n=== Lista de Usuários ===");
+
+                    if (usuarios.isEmpty()) {
+                        System.out.println("Nenhum usuário cadastrado.");
+                    } else {
+                        for (Usuario u : usuarios) {
+                            System.out.println("Nome: " + u.getNome());
+                            System.out.println("Email: " + u.getEmail());
+                            System.out.println("-------------------");
+                        }
+                    }
+
+                    break;
             }
         } while (opcao != 0);
 
         sc.close();
     }
 }
+
+    
